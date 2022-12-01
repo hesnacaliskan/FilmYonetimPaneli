@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FilmYonetimPaneli.Domain.Entities
 {
-    public class Film
+    public class Film : BaseEntity
     {
         public int filmID { get; set; }
         public string filmAd { get; set; }

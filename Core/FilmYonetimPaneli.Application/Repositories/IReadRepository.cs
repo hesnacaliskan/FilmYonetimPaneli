@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmYonetimPaneli.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FilmYonetimPaneli.Application.Repositories
 {
-    public interface IReadRepository<T> : IRepository<T> where T : class 
+    public interface IReadRepository<T> : IRepository<T> where T : BaseEntity 
     {
         IQueryable<T> GetAll();
         IQueryable<T> GetWhere(Expression<Func<T, bool>> method);

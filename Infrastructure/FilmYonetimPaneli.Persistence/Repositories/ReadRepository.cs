@@ -1,4 +1,5 @@
 ﻿using FilmYonetimPaneli.Application.Repositories;
+using FilmYonetimPaneli.Domain.Entities;
 using FilmYonetimPaneli.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FilmYonetimPaneli.Persistence.Repositories
 {
-    public class ReadRepository<T> : IReadRepository<T> where T : class
+    public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity
     {
         private readonly FilmYonetimPaneliDbContext _context;
 
@@ -30,9 +31,8 @@ namespace FilmYonetimPaneli.Persistence.Repositories
             => await Table.FirstOrDefaultAsync(method);
 
         public Task<T> GetByIdAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+            => Table.FirstOrDefaultAsync(data => data.Id == id);
+ 
 
 
     }
