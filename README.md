@@ -1,1 +1,1 @@
-Onion Architecture kullanılarak oluşturulmuş bir Film Yönetim panelinin demo versiyonudur. 
+Onion Architecture kullanılarak oluşturulmuş bir Film Yönetim Panelinin demo versiyonudur. 
