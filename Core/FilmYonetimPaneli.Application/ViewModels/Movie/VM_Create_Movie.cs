@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FilmYonetimPaneli.Domain.Entities
+namespace FilmYonetimPaneli.Application.ViewModels.Movie
 {
-    public class Film : BaseEntity
-    {        
+    public class VM_Create_Movie
+    {
         public string filmAd { get; set; }
         public int filmYapimYil { get; set; }
-        public ICollection<Salon> Salons { get; set; }
-
     }
 }

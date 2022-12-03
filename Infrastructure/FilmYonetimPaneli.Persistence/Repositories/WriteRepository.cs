@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FilmYonetimPaneli.Persistence.Repositories
 {
-    internal class WriteRepository<T> : IWriteRepository<T> where T : BaseEntity
+    public class WriteRepository<T> : IWriteRepository<T> where T : BaseEntity
     {
         private readonly FilmYonetimPaneliDbContext _context;
 

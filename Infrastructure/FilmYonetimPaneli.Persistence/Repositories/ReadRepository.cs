@@ -30,8 +30,8 @@ namespace FilmYonetimPaneli.Persistence.Repositories
         public async Task<T> GetSingleAsync(Expression<Func<T, bool>> method)
             => await Table.FirstOrDefaultAsync(method);
 
-        public Task<T> GetByIdAsync(int id)
-            => Table.FirstOrDefaultAsync(data => data.Id == id);
+        public async Task<T> GetByIdAsync(int id)
+            => await Table.FirstOrDefaultAsync(data => data.Id == id);
  
 
 
